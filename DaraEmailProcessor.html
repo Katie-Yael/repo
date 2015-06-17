@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Dara Sanctuary Form Processor</title>
+    <link href="dara_2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="container">
+	<div id="masthead">
+		<img alt="Welcome to the Dara Sanctuary" height="260" src="darabanner.jpg" width="860" align="top" /></div>
+	<div id="top-nav"><br /><center><a href="daraindex.html">Home</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;
+<a href="about-us.html">About Us</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;
+<a href="donate.html">Donate</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;
+<a href="darasponsor.html">Sponsor a Cat</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;
+<a href="contact.html">Contact Us</a></center>
+	</div>
+	<div id="left_nav"><p> this is the side navigation bar
+	</p>
+			</div>
+	<div id="main_content">
+
+                        <center><h1>Thank You!  Your Email has been sent!</h1>
+			
+                        <h3>You sent the following Email details:</h3></center>
+
+                        <script type="text/javascript">
+                            /* <![CDATA[ */
+			    var index=0;
+			    var responseArray = new Array(6);
+			    responseArray[0] = "Your name:" ;
+			    responseArray[1] = "Your Email:" ;
+			    responseArray[2] = "Recipient name:";
+			    responseArray[3] = "Recipient Email:";
+			    responseArray[4] = "Subject line:";
+			    responseArray[5] = "Comments:";
+			    responseArray[6] = "Additional recipients:";
+			    
+			    
+		    
+			    document.write("<table>")
+			    
+                            var formData = location.search;
+                            formData = formData.substring(1, formData.length);
+                            while (formData.indexOf("+") != -1) {
+	                            formData = formData.replace("+", " ");
+                            }
+                            formData = unescape(formData);
+                            var formArray = formData.split("&");
+			    
+                            
+                            for (var i=0; i < formArray.length; ++i) {
+				var printBegin=formArray[i].search("=") +1; 
+
+				
+	                    document.write("<tr><td>" + responseArray[i] + "</td><td>" + formArray[i].substring(printBegin) +  "</td></tr>");
+				    
+                            }
+                             document.write("</table>");
+                            /* ]]> */
+                        </script>
+
+                    </div>
+    </div>
+                </body>
+</html>
